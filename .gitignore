@@ -16,3 +16,4 @@ META-INF/
 /.metadata/
 output/jscss
 output/*.html
+output/.htaccess
