@@ -1,0 +1,18 @@
+.att { padding:0px; margin:0px; height:100%; z-index:2; }
+.linkbutton { text-align:center; margin-top:5px; padding:5px; }
+.embed { vertical-align:text-top; padding:0px; margin:0px; border:0px,0px,0px,0px; width:100%; }
+.noborder { border-width:0px; margin-top:-1px; padding-top:-1px; margin-bottom:-1px; padding-bottom:-1px; }
+
+body {
+}
+#ssql_body_contents {
+}
+
+.TFE10006{ background-color:beige; }
+.TFE10000{ width:50px; }
+.TFE10001{ width:30px; }
+.TFE10002{ width:130px; background-color:yellow; }
+.TFE10003{ width:100px; background-color:azure; }
+.TFE10004{ width:120px; }
+
+

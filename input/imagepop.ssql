@@ -1,0 +1,3 @@
+GENERATE html_bootstrap
+[image_pop(e.name, e.image,'./image', 'left')]!
+from employee e

@@ -1,0 +1,4 @@
+GENERATE HTML 
+	[id, {name, byear@{color=red}, name}]! !
+	[id, {name, byear@{color=red}, name}]!
+FROM employee;

@@ -1,0 +1,65 @@
+.horizontal_display > *{
+	border: 1px solid;
+	display:inline-block;
+}
+
+.vertical_display > *{
+	border-bottom:1px solid;
+	display:block;
+}
+
+.vertical_display > *:first-child{
+	border-top: 1px solid;
+}
+
+.half_space { width: 50%; }
+
+.hidden { display: none !important; }
+
+.bordered{
+	border: 1px solid;
+}
+
+.con1{
+	
+}
+
+.con2{
+	
+}
+
+.con3:first-child{
+
+}
+
+.con3{
+	
+}
+
+.group1{
+	
+}
+.group2{
+	
+}
+
+.group1 > *{
+}
+
+.group2 > *{
+}
+
+.att{
+}
+
+.link{
+	
+}
+
+.nest{
+	margin:3px;
+}
+
+input[type="submit"]{
+	
+}

@@ -1,0 +1,5 @@
+GENERATE HTML
+{'部署名','マネージャー'}!
+[ d.name, e.name ]!
+FROM dept d, employee e
+WHERE d.manager=e.id

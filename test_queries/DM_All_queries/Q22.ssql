@@ -1,0 +1,17 @@
+GENERATE HTML {
+
+-- 関数@{x=属性}
+[
+a(d.name, d.id)@{bgcolor = dc.fcolor},
+image(d.name, d.id)@{bgcolor = dc.fcolor},
+
+link(d.name, 'Q12.ssql', d.id),
+link(d.name, 'Q12.ssql', d.id)@{bgcolor = 'gray'},
+link(d.name@{bgcolor = 'blue'}, 'Q12.ssql', d.id),
+link(d.name, 'Q12.ssql', d.id)@{bgcolor = dc.fcolor},
+link(d.name@{bgcolor = dc.fcolor}, 'Q12.ssql', d.id)
+]!
+
+}@{aaa='x, y', cssfile='a.css, b.css'} --2つのcssファイル指定
+FROM dept d , deptcolor dc
+WHERE dc.floor = d.floor

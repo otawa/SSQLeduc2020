@@ -1,0 +1,4 @@
+GENERATE HTML
+[(asc1)d.id, d.name, [i.name, (desc2)i.price]! ]!
+FROM dept d, item i
+WHERE i.dept=d.id

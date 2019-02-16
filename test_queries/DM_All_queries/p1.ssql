@@ -1,0 +1,7 @@
+generate html [s.city,
+               d.floor,
+               d.name,
+               m.name,
+               i.name]!
+from dept d, employee m, item i, store s
+where d.manager=m.id and d.id=i.dept and s.id=d.store

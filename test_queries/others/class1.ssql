@@ -1,0 +1,5 @@
+
+GENERATE HTML
+	[e.id@{class=CCC, color=green}]! 
+FROM employee e
+

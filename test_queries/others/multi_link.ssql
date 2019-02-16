@@ -1,0 +1,47 @@
+
+GENERATE HTML
+	[link(e1.name, file="Q31.ssql", att=e1.id)]! 
+FROM employee e1
+
+
+/*
+
+GENERATE HTML
+	[link(e1.name, file="Q31.ssql", att=e1.id)]! !
+	"========================"!
+	[link(e2.name, file="Q31.ssql", att=e2.id)]! !
+	"========================"!
+	[link(s.city, file="Q32.ssql", att=s.id)]!
+FROM employee e1, employee e2, shop s
+
+
+
+GENERATE HTML
+	[link(e1.name, file="Q31.ssql", att=e1.id)]! !
+	"========================"!
+	[link(e2.city, file="Q32.ssql", att=e2.id)]!
+FROM employee e1, shop e2
+
+
+
+
+GENERATE HTML
+{
+    {
+        {1!2!3!4!5!6!7!8!9!10}@{height=100%},
+        [null((desc1)pr.ppg)!
+        {
+        link(pr.playername, file="playerformat.ssql", att=pr.id)
+        }@{width=214}]!
+    },
+    {
+        {1!2!3!4!5!6!7!8!9!10}@{height=100%},
+        [
+        null((desc1)ar.apg)!
+        link(ar.playername, file="playerformat.ssql", att=ar.id)
+        ]!
+    }
+}@{author=naoya}
+FROM pointsleaders pr,
+assistsleaders ar
+*/

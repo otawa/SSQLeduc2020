@@ -1,0 +1,10 @@
+foreach d.id
+generate html [
+                    {  {s.city@{width=50},d.floor||'F'}!
+                      d.name@{width=130,bgcolor='yellow'}!
+                      m.name@{width=100,bgcolor='azure'}!
+                      [i.name@{width=180}]!
+                    }@{bgcolor='beige'}
+		]!
+from dept d, employee m, item i, store s
+where d.manager=m.id and d.id=i.dept and s.id=d.store

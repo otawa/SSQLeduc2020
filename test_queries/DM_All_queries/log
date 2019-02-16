@@ -1,0 +1,748 @@
+//Entering SuperSQL System//
+[Parser:Parser] filename = /Users/tabata/Documents/workspace/NewSSQL-maven/test_queries/DM_All_queries/Q1.ssql
+
+GENERATE HTML
+[e.name ! e.byear],
+FROM employee e
+Schema is [[0, 1]]
+le0 is [HTMLG1, [HTMLC2, [0], [1]]]
+Schema: [[0, 1]]
+
+********** SQL is **********
+SELECT e.name, e.byear FROM employee e;
+## DB result ##
+File encoding: UTF-8
+ExecTime: 748msec
+// completed normally //
+//Entering SuperSQL System//
+[Parser:Parser] filename = /Users/tabata/Documents/workspace/NewSSQL-maven/test_queries/DM_All_queries/Q10.ssql
+
+GENERATE HTML
+[e.name % {e.salary, e.syear}]!
+FROM employee e
+Schema is [[0, 1, 2]]
+le0 is [HTMLG2, [HTMLC3, [0], [HTMLC1, [1], [2]]]]
+Schema: [[0, 1, 2]]
+
+********** SQL is **********
+SELECT e.name, e.salary, e.syear FROM employee e;
+## DB result ##
+File encoding: UTF-8
+ExecTime: 827msec
+// completed normally //
+//Entering SuperSQL System//
+[Parser:Parser] filename = /Users/tabata/Documents/workspace/NewSSQL-maven/test_queries/DM_All_queries/Q11.ssql
+
+GENERATE HTML
+[link(e.name, 'Q12.ssql', e.id)]!
+FROM employee e
+Schema is [[0, 1]]
+le0 is [HTMLG2, [0, Q12.ssql, 1]]
+Schema: [[0, 1]]
+
+********** SQL is **********
+SELECT e.name, e.id FROM employee e;
+## DB result ##
+File encoding: UTF-8
+ExecTime: 1003msec
+// completed normally //
+//Entering SuperSQL System//
+[Parser:Parser] filename = /Users/tabata/Documents/workspace/NewSSQL-maven/test_queries/DM_All_queries/Q12.ssql
+FOREACH e.id
+
+GENERATE HTML
+[e.salary, e.syear]!
+FROM employee e
+[prefix, [[fix, [[foreach, [FOREACH, [operand, [[table_alias, [[any_name, [e]]]], ., [column_name, [[any_name, [id]]]]]]]]]]]]
+e.id
+Schema is [[0, [1, 2]]]
+le0 is [HTMLG3, [HTMLC0, [0], [HTMLG2, [HTMLC1, [1], [2]]]]]
+Schema: [[0, [1, 2]]]
+
+********** SQL is **********
+SELECT e.id, e.salary, e.syear FROM employee e;
+## DB result ##
+ExecTime: 1040msec
+// completed normally //
+//Entering SuperSQL System//
+[Parser:Parser] filename = /Users/tabata/Documents/workspace/NewSSQL-maven/test_queries/DM_All_queries/Q13.ssql
+
+GENERATE HTML
+[link(e.name@{target='_new'},'Q12.ssql',e.id)]!
+FROM employee e
+Schema is [[0, 1]]
+le0 is [HTMLG2, [0, Q12.ssql, 1]]
+Schema: [[0, 1]]
+
+********** SQL is **********
+SELECT e.name, e.id FROM employee e;
+## DB result ##
+File encoding: UTF-8
+ExecTime: 1110msec
+// completed normally //
+//Entering SuperSQL System//
+[Parser:Parser] filename = /Users/tabata/Documents/workspace/NewSSQL-maven/test_queries/DM_All_queries/Q14-1.ssql
+
+GENERATE HTML
+[(asc)e.salary, (desc)e.id, e.name]!
+FROM employee e
+Schema is [[0, 1, 2]]
+le0 is [HTMLG2, [HTMLC1, [0], [1], [2]]]
+Schema: [[0, 1, 2]]
+
+********** SQL is **********
+SELECT e.salary, e.id, e.name FROM employee e;
+## DB result ##
+File encoding: UTF-8
+ExecTime: 1053msec
+// completed normally //
+//Entering SuperSQL System//
+[Parser:Parser] filename = /Users/tabata/Documents/workspace/NewSSQL-maven/test_queries/DM_All_queries/Q14-2.ssql
+
+GENERATE HTML
+[(asc1)e.salary, (desc2)e.id, e.name]!
+FROM employee e
+Schema is [[0, 1, 2]]
+le0 is [HTMLG2, [HTMLC1, [0], [1], [2]]]
+Schema: [[0, 1, 2]]
+
+********** SQL is **********
+SELECT e.salary, e.id, e.name FROM employee e;
+## DB result ##
+File encoding: UTF-8
+ExecTime: 1028msec
+// completed normally //
+//Entering SuperSQL System//
+[Parser:Parser] filename = /Users/tabata/Documents/workspace/NewSSQL-maven/test_queries/DM_All_queries/Q15.ssql
+
+GENERATE HTML
+[ (asc)d.id, [ (desc)e.id ,e.name]! ]!
+FROM dept d, employee e
+WHERE d.manager=e.manager
+Schema is [[0, [1, 2]]]
+le0 is [HTMLG2, [HTMLC1, [0], [HTMLG2, [HTMLC1, [1], [2]]]]]
+Schema: [[0, [1, 2]]]
+SELECT d.id, e.id, e.name FROM dept d ,employee e WHERE d.manager = e.manager 
+
+********** SQL is **********
+SELECT d.id, e.id, e.name FROM dept d ,employee e WHERE d.manager = e.manager ;
+## DB result ##
+File encoding: UTF-8
+ExecTime: 998msec
+// completed normally //
+//Entering SuperSQL System//
+[Parser:Parser] filename = /Users/tabata/Documents/workspace/NewSSQL-maven/test_queries/DM_All_queries/Q16.ssql
+
+GENERATE HTML
+[null((desc1)e.salary), e.name]!
+FROM employee e
+Schema is [[0, 1]]
+le0 is [HTMLG2, [HTMLC1, [0], [1]]]
+Schema: [[0, 1]]
+
+********** SQL is **********
+SELECT e.salary, e.name FROM employee e;
+## DB result ##
+File encoding: UTF-8
+ExecTime: 1051msec
+// completed normally //
+//Entering SuperSQL System//
+[Parser:Parser] filename = /Users/tabata/Documents/workspace/NewSSQL-maven/test_queries/DM_All_queries/Q17.ssql
+
+GENERATE HTML
+[ e.name ]!, avg[e.salary]
+FROM employee e
+[operand]
+Schema is [[0], 1]
+le0 is [HTMLC1, [HTMLG2, [0]], [1]]
+Schema: [[0], 1]
+
+********** SQL is **********
+SELECT e.name, e.salary FROM employee e;
+## DB result ##
+//Entering SuperSQL System//
+[Parser:Parser] filename = /Users/tabata/Documents/workspace/NewSSQL-maven/test_queries/DM_All_queries/Q18.ssql
+
+GENERATE HTML
+[e.id, e.name, (e.salary / 113) || ' ドル']!
+FROM employee e
+Schema is [[0, 1, 2]]
+le0 is [HTMLG2, [HTMLC1, [0], [1], [2]]]
+Schema: [[0, 1, 2]]
+
+********** SQL is **********
+SELECT e.id, e.name, ( e.salary / 113 ) || ' ドル' FROM employee e;
+## DB result ##
+File encoding: UTF-8
+ExecTime: 854msec
+// completed normally //
+//Entering SuperSQL System//
+[Parser:Parser] filename = /Users/tabata/Documents/workspace/NewSSQL-maven/test_queries/DM_All_queries/Q19.ssql
+
+GENERATE HTML
+[e.name, &replace(e.name,'田','山')]!
+FROM employee e 　
+Schema is [[0, 1]]
+le0 is [HTMLG2, [HTMLC1, [0], [1]]]
+Schema: [[0, 1]]
+
+********** SQL is **********
+SELECT e.name, replace ( e.name , '田' , '山' ) FROM employee e;
+## DB result ##
+File encoding: UTF-8
+ExecTime: 1034msec
+// completed normally //
+//Entering SuperSQL System//
+[Parser:Parser] filename = /Users/tabata/Documents/workspace/NewSSQL-maven/test_queries/DM_All_queries/Q2.ssql
+
+GENERATE HTML
+[e.name, e.byear]!
+FROM employee e
+Schema is [[0, 1]]
+le0 is [HTMLG2, [HTMLC1, [0], [1]]]
+Schema: [[0, 1]]
+
+********** SQL is **********
+SELECT e.name, e.byear FROM employee e;
+## DB result ##
+File encoding: UTF-8
+ExecTime: 789msec
+// completed normally //
+//Entering SuperSQL System//
+[Parser:Parser] filename = /Users/tabata/Documents/workspace/NewSSQL-maven/test_queries/DM_All_queries/Q20.ssql
+
+GENERATE HTML
+{
+[e.name /*@{class='name'}*/ , e.salary]!
+}/*@{cssfile='demo.css'}*/
+FROM employee e --,shop s
+Schema is [[0, 1]]
+le0 is [HTMLG2, [HTMLC1, [0], [1]]]
+Schema: [[0, 1]]
+
+********** SQL is **********
+SELECT e.name, e.salary FROM employee e;
+## DB result ##
+File encoding: UTF-8
+ExecTime: 825msec
+// completed normally //
+//Entering SuperSQL System//
+[Parser:Parser] filename = /Users/tabata/Documents/workspace/NewSSQL-maven/test_queries/DM_All_queries/Q21.ssql
+
+GENERATE HTML
+[e.id@{font-size=30}]!@{color='green'},avg[e.salary]@{color = 'red', font-size=100}
+FROM employee e
+[operand, true]
+Schema is [[0], 1]
+le0 is [HTMLC1, [HTMLG2, [0]], [1]]
+Schema: [[0], 1]
+
+********** SQL is **********
+SELECT e.id, e.salary FROM employee e;
+## DB result ##
+//Entering SuperSQL System//
+[Parser:Parser] filename = /Users/tabata/Documents/workspace/NewSSQL-maven/test_queries/DM_All_queries/Q22.ssql
+
+GENERATE HTML {
+
+-- 関数@{x=属性}
+[
+a(d.name, d.id)@{bgcolor = dc.fcolor},
+image(d.name, d.id)@{bgcolor = dc.fcolor},
+
+link(d.name, 'Q12.ssql', d.id),
+link(d.name, 'Q12.ssql', d.id)@{bgcolor = 'gray'},
+link(d.name@{bgcolor = 'blue'}, 'Q12.ssql', d.id),
+link(d.name, 'Q12.ssql', d.id)@{bgcolor = dc.fcolor},
+link(d.name@{bgcolor = dc.fcolor}, 'Q12.ssql', d.id)
+]!
+
+}@{aaa='x, y', cssfile='a.css, b.css'} --2つのcssファイル指定
+FROM dept d , deptcolor dc
+WHERE dc.floor = d.floor
+Schema is [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]]
+le0 is [HTMLG2, [HTMLC1, [HTMLDecoration, [0, 1], [2]], [HTMLDecoration, [3, 4], [5]], [6, Q12.ssql, 7], [8, Q12.ssql, 9], [10, Q12.ssql, 11], [HTMLDecoration, [12, Q12.ssql, 13], [14]], [HTMLDecoration, [15], [16], Q12.ssql, 17]]]
+Schema: [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]]
+SELECT d.name, d.id, dc.fcolor, d.name, d.id, dc.fcolor, d.name, d.id, d.name, d.id, d.name, d.id, d.name, d.id, dc.fcolor, d.name, dc.fcolor, d.id FROM dept d ,deptcolor dc WHERE dc.floor = d.floor 
+
+********** SQL is **********
+SELECT d.name, d.id, dc.fcolor, d.name, d.id, dc.fcolor, d.name, d.id, d.name, d.id, d.name, d.id, d.name, d.id, dc.fcolor, d.name, dc.fcolor, d.id FROM dept d ,deptcolor dc WHERE dc.floor = d.floor ;
+## DB result ##
+File encoding: UTF-8
+ExecTime: 2182msec
+// completed normally //
+//Entering SuperSQL System//
+[Parser:Parser] filename = /Users/tabata/Documents/workspace/NewSSQL-maven/test_queries/DM_All_queries/Q3.ssql
+
+GENERATE HTML
+[d.name![i.name, i.price]!]!
+FROM item i, dept d
+WHERE i.dept = d.id
+Schema is [[0, [1, 2]]]
+le0 is [HTMLG2, [HTMLC2, [0], [HTMLG2, [HTMLC1, [1], [2]]]]]
+Schema: [[0, [1, 2]]]
+SELECT d.name, i.name, i.price FROM item i ,dept d WHERE i.dept = d.id 
+
+********** SQL is **********
+SELECT d.name, i.name, i.price FROM item i ,dept d WHERE i.dept = d.id ;
+## DB result ##
+File encoding: UTF-8
+ExecTime: 910msec
+// completed normally //
+//Entering SuperSQL System//
+[Parser:Parser] filename = /Users/tabata/Documents/workspace/NewSSQL-maven/test_queries/DM_All_queries/Q4.ssql
+
+GENERATE HTML
+   [d.name]!  , [i.name]!  , [i.price]!
+FROM item i, dept d
+WHERE i.dept = d.id
+Schema is [[0], [1], [2]]
+le0 is [HTMLC1, [HTMLG2, [0]], [HTMLG2, [1]], [HTMLG2, [2]]]
+Schema: [[0], [1], [2]]
+SELECT d.name, i.name, i.price FROM item i ,dept d WHERE i.dept = d.id 
+
+********** SQL is **********
+SELECT d.name, i.name, i.price FROM item i ,dept d WHERE i.dept = d.id ;
+## DB result ##
+File encoding: UTF-8
+ExecTime: 803msec
+// completed normally //
+//Entering SuperSQL System//
+[Parser:Parser] filename = /Users/tabata/Documents/workspace/NewSSQL-maven/test_queries/DM_All_queries/Q5.ssql
+
+GENERATE HTML
+[e.name],3!
+FROM employee e
+Schema is [[0]]
+le0 is [HTMLG1, [0]]
+Schema: [[0]]
+
+********** SQL is **********
+SELECT e.name FROM employee e;
+## DB result ##
+File encoding: UTF-8
+ExecTime: 657msec
+// completed normally //
+//Entering SuperSQL System//
+[Parser:Parser] filename = /Users/tabata/Documents/workspace/NewSSQL-maven/test_queries/DM_All_queries/Q6-2.ssql
+
+GENERATE HTML
+[ link(e.name, 'Q12.ssql', e.id), e.salary ],3!5%
+FROM employee e;
+Schema is [[0, 1, 2]]
+le0 is [HTMLG1, [HTMLC1, [0, Q12.ssql, 1], [2]]]
+Schema: [[0, 1, 2]]
+
+********** SQL is **********
+SELECT e.name, e.id, e.salary FROM employee e;
+## DB result ##
+File encoding: UTF-8
+ExecTime: 1180msec
+// completed normally //
+//Entering SuperSQL System//
+[Parser:Parser] filename = /Users/tabata/Documents/workspace/NewSSQL-maven/test_queries/DM_All_queries/Q6.ssql
+
+GENERATE HTML
+[e.name, e.salary],3!5%
+FROM employee e
+Schema is [[0, 1]]
+le0 is [HTMLG1, [HTMLC1, [0], [1]]]
+Schema: [[0, 1]]
+
+********** SQL is **********
+SELECT e.name, e.salary FROM employee e;
+## DB result ##
+File encoding: UTF-8
+ExecTime: 843msec
+// completed normally //
+//Entering SuperSQL System//
+[Parser:Parser] filename = /Users/tabata/Documents/workspace/NewSSQL-maven/test_queries/DM_All_queries/Q7.ssql
+
+GENERATE HTML
+{
+{
+[e.name@{class='name'},e.salary@{class='salary'},
+e.byear@{class='birth'}]!
+}@{title='MEMBER',tablealign='center'}
+}@{cssfile='demo.css',charset='euc-jp'}
+FROM employee e
+Schema is [[0, 1, 2]]
+le0 is [HTMLG2, [HTMLC1, [0], [1], [2]]]
+Schema: [[0, 1, 2]]
+
+********** SQL is **********
+SELECT e.name, e.salary, e.byear FROM employee e;
+## DB result ##
+File encoding: euc-jp
+ExecTime: 1003msec
+// completed normally //
+//Entering SuperSQL System//
+[Parser:Parser] filename = /Users/tabata/Documents/workspace/NewSSQL-maven/test_queries/DM_All_queries/Q8.ssql
+
+GENERATE HTML
+[(asc)d.floor, d.name@{bgcolor = dc.fcolor}]!
+FROM dept d , deptcolor dc
+WHERE dc.floor = d.floor
+Schema is [[0, 1, 2]]
+le0 is [HTMLG2, [HTMLC1, [0], [HTMLDecoration, [1], [2]]]]
+Schema: [[0, 1, 2]]
+SELECT d.floor, d.name, dc.fcolor FROM dept d ,deptcolor dc WHERE dc.floor = d.floor 
+
+********** SQL is **********
+SELECT d.floor, d.name, dc.fcolor FROM dept d ,deptcolor dc WHERE dc.floor = d.floor ;
+## DB result ##
+File encoding: UTF-8
+ExecTime: 963msec
+// completed normally //
+//Entering SuperSQL System//
+[Parser:Parser] filename = /Users/tabata/Documents/workspace/NewSSQL-maven/test_queries/DM_All_queries/Q9.ssql
+
+GENERATE HTML
+[e.name, image(e.pict,'./picts')@{width=200}]!
+FROM employee e
+Schema is [[0, 1]]
+le0 is [HTMLG2, [HTMLC1, [0], [1, ./picts]]]
+Schema: [[0, 1]]
+
+********** SQL is **********
+SELECT e.name, e.pict FROM employee e;
+## DB result ##
+File encoding: UTF-8
+ExecTime: 1115msec
+// completed normally //
+//Entering SuperSQL System//
+[Parser:Parser] filename = /Users/tabata/Documents/workspace/NewSSQL-maven/test_queries/DM_All_queries/p1.ssql
+
+generate html [s.city,
+               d.floor,
+               d.name,
+               m.name,
+               i.name]!
+from dept d, employee m, item i, store s
+where d.manager=m.id and d.id=i.dept and s.id=d.store
+Schema is [[0, 1, 2, 3, 4]]
+le0 is [HTMLG2, [HTMLC1, [0], [1], [2], [3], [4]]]
+Schema: [[0, 1, 2, 3, 4]]
+SELECT s.city, d.floor, d.name, m.name, i.name FROM dept d ,employee m ,item i ,store s WHERE d.manager = m.id
+
+********** SQL is **********
+SELECT s.city, d.floor, d.name, m.name, i.name FROM dept d ,employee m ,item i ,store s WHERE d.manager = m.id AND d.id = i.dept AND s.id = d.store ;
+## DB result ##
+File encoding: UTF-8
+ExecTime: 1404msec
+// completed normally //
+//Entering SuperSQL System//
+[Parser:Parser] filename = /Users/tabata/Documents/workspace/NewSSQL-maven/test_queries/DM_All_queries/p2.ssql
+
+generate html 
+{[(asc1) s.city@{width=50},
+   (asc2) d.floor||'F'@{width=30},
+   (asc3) d.name@{width=130,
+               bgcolor='yellow'},
+      m.name@{width=100,
+		bgcolor='azure'},
+      i.name@{width=120}]!
+                 @{bgcolor='beige'}
+}@{cssfile='winter.css'}
+from dept d, employee m, item i, store s
+where d.manager=m.id and d.id=i.dept and s.id=d.store
+Schema is [[0, 1, 2, 3, 4]]
+le0 is [HTMLG2, [HTMLC1, [0], [1], [2], [3], [4]]]
+Schema: [[0, 1, 2, 3, 4]]
+SELECT s.city, d.floor || 'F', d.name, m.name, i.name FROM dept d ,employee m ,item i ,store s WHERE d.manager = m.id
+
+********** SQL is **********
+SELECT s.city, d.floor || 'F', d.name, m.name, i.name FROM dept d ,employee m ,item i ,store s WHERE d.manager = m.id AND d.id = i.dept AND s.id = d.store ;
+## DB result ##
+File encoding: UTF-8
+ExecTime: 1366msec
+// completed normally //
+//Entering SuperSQL System//
+[Parser:Parser] filename = /Users/tabata/Documents/workspace/NewSSQL-maven/test_queries/DM_All_queries/p3.ssql
+
+generate html 
+              [(asc1) s.city@{width=50},
+                [(asc1) d.floor||'F'@{width=30},
+                  [(asc1) d.name@{width=130,bgcolor='yellow'},
+                   m.name@{width=100,bgcolor='azure'},
+                   [i.name@{width=120}],
+                  ]!
+                ]!
+              ]!@{bgcolor='beige'}
+from dept d, employee m, item i, store s
+where d.manager=m.id and d.id=i.dept and s.id=d.store
+Schema is [[0, [1, [2, 3, [4]]]]]
+le0 is [HTMLG2, [HTMLC1, [0], [HTMLG2, [HTMLC1, [1], [HTMLG2, [HTMLC1, [2], [3], [HTMLG1, [4]]]]]]]]
+Schema: [[0, [1, [2, 3, [4]]]]]
+SELECT s.city, d.floor || 'F', d.name, m.name, i.name FROM dept d ,employee m ,item i ,store s WHERE d.manager = m.id
+
+********** SQL is **********
+SELECT s.city, d.floor || 'F', d.name, m.name, i.name FROM dept d ,employee m ,item i ,store s WHERE d.manager = m.id AND d.id = i.dept AND s.id = d.store ;
+## DB result ##
+File encoding: UTF-8
+ExecTime: 1268msec
+// completed normally //
+//Entering SuperSQL System//
+[Parser:Parser] filename = /Users/tabata/Documents/workspace/NewSSQL-maven/test_queries/DM_All_queries/p4.ssql
+
+generate html [(asc1) s.city@{width=50},
+                [(asc1) d.floor||'F'@{width=30},
+                  [(asc1) d.name@{width=130,bgcolor='yellow'} %
+                    {
+                      {s.city@{width=50},d.floor||'F'}!
+                      d.name@{width=130,bgcolor='yellow'}!
+                      m.name@{width=100,bgcolor='azure'}!
+                      [i.name@{width=180}]!
+                    }@{bgcolor='beige'}
+                  ]!
+                ]!
+              ]!@{bgcolor='beige'}
+from dept d, employee m, item i, store s
+where d.manager=m.id and d.id=i.dept and s.id=d.store
+Schema is [[0, [1, [2, 3, 4, 5, 6, [7]]]]]
+le0 is [HTMLG2, [HTMLC1, [0], [HTMLG2, [HTMLC1, [1], [HTMLG2, [HTMLC3, [2], [HTMLC2, [HTMLC1, [3], [4]], [5], [6], [HTMLG2, [7]]]]]]]]]
+Schema: [[0, [1, [2, 3, 4, 5, 6, [7]]]]]
+SELECT s.city, d.floor || 'F', d.name, s.city, d.floor || 'F', d.name, m.name, i.name FROM dept d ,employee m ,item i ,store s WHERE d.manager = m.id
+
+********** SQL is **********
+SELECT s.city, d.floor || 'F', d.name, s.city, d.floor || 'F', d.name, m.name, i.name FROM dept d ,employee m ,item i ,store s WHERE d.manager = m.id AND d.id = i.dept AND s.id = d.store ;
+## DB result ##
+File encoding: UTF-8
+ExecTime: 1373msec
+// completed normally //
+//Entering SuperSQL System//
+[Parser:Parser] filename = /Users/tabata/Documents/workspace/NewSSQL-maven/test_queries/DM_All_queries/p4a.ssql
+
+generate html [{(asc1) s.city@{width=50},
+                [(asc1) d.floor||'F'@{width=30},
+                  [link((asc1) d.name@{width=130,bgcolor='yellow'},'p4b.ssql',d.id)
+                  ]!
+                ]!}@{valign='top'}
+              ]!@{bgcolor='beige'}
+from dept d, store s
+where s.id=d.store
+Schema is [[0, [1, [2, 3]]]]
+le0 is [HTMLG2, [HTMLC1, [0], [HTMLG2, [HTMLC1, [1], [HTMLG2, [2, p4b.ssql, 3]]]]]]
+Schema: [[0, [1, [2, 3]]]]
+SELECT s.city, d.floor || 'F', d.name, d.id FROM dept d ,store s WHERE s.id = d.store 
+
+********** SQL is **********
+SELECT s.city, d.floor || 'F', d.name, d.id FROM dept d ,store s WHERE s.id = d.store ;
+## DB result ##
+File encoding: UTF-8
+ExecTime: 1649msec
+// completed normally //
+//Entering SuperSQL System//
+[Parser:Parser] filename = /Users/tabata/Documents/workspace/NewSSQL-maven/test_queries/DM_All_queries/p4b.ssql
+foreach d.id
+
+generate html [
+                    {  {s.city@{width=50},d.floor||'F'}!
+                      d.name@{width=130,bgcolor='yellow'}!
+                      m.name@{width=100,bgcolor='azure'}!
+                      [i.name@{width=180}]!
+                    }@{bgcolor='beige'}
+		]!
+from dept d, employee m, item i, store s
+where d.manager=m.id and d.id=i.dept and s.id=d.store
+[prefix, [[fix, [[foreach, [foreach, [operand, [[table_alias, [[any_name, [d]]]], ., [column_name, [[any_name, [id]]]]]]]]]]]]
+d.id
+Schema is [[0, [1, 2, 3, 4, [5]]]]
+le0 is [HTMLG3, [HTMLC0, [0], [HTMLG2, [HTMLC2, [HTMLC1, [1], [2]], [3], [4], [HTMLG2, [5]]]]]]
+Schema: [[0, [1, 2, 3, 4, [5]]]]
+SELECT d.id, s.city, d.floor || 'F', d.name, m.name, i.name FROM dept d ,employee m ,item i ,store s WHERE d.manager = m.id
+
+********** SQL is **********
+SELECT d.id, s.city, d.floor || 'F', d.name, m.name, i.name FROM dept d ,employee m ,item i ,store s WHERE d.manager = m.id AND d.id = i.dept AND s.id = d.store ;
+## DB result ##
+ExecTime: 1277msec
+// completed normally //
+//Entering SuperSQL System//
+[Parser:Parser] filename = /Users/tabata/Documents/workspace/NewSSQL-maven/test_queries/DM_All_queries/r1.ssql
+
+GENERATE HTML
+[ d.id, d.name, d.store, d.floor, d.manager ]!
+FROM dept d
+Schema is [[0, 1, 2, 3, 4]]
+le0 is [HTMLG2, [HTMLC1, [0], [1], [2], [3], [4]]]
+Schema: [[0, 1, 2, 3, 4]]
+
+********** SQL is **********
+SELECT d.id, d.name, d.store, d.floor, d.manager FROM dept d;
+## DB result ##
+File encoding: UTF-8
+ExecTime: 698msec
+// completed normally //
+//Entering SuperSQL System//
+[Parser:Parser] filename = /Users/tabata/Documents/workspace/NewSSQL-maven/test_queries/DM_All_queries/r10.ssql
+
+GENERATE HTML
+[(asc1)d.id, d.name, [i.name, (desc2)i.price]! ]!
+FROM dept d, item i
+WHERE i.dept=d.id
+Schema is [[0, 1, [2, 3]]]
+le0 is [HTMLG2, [HTMLC1, [0], [1], [HTMLG2, [HTMLC1, [2], [3]]]]]
+Schema: [[0, 1, [2, 3]]]
+SELECT d.id, d.name, i.name, i.price FROM dept d ,item i WHERE i.dept = d.id 
+
+********** SQL is **********
+SELECT d.id, d.name, i.name, i.price FROM dept d ,item i WHERE i.dept = d.id ;
+## DB result ##
+File encoding: UTF-8
+ExecTime: 995msec
+// completed normally //
+//Entering SuperSQL System//
+[Parser:Parser] filename = /Users/tabata/Documents/workspace/NewSSQL-maven/test_queries/DM_All_queries/r2.ssql
+
+GENERATE HTML
+[ d.name, [ e.name ]! ]!
+FROM dept d, employee e
+WHERE d.manager=e.manager
+Schema is [[0, [1]]]
+le0 is [HTMLG2, [HTMLC1, [0], [HTMLG2, [1]]]]
+Schema: [[0, [1]]]
+SELECT d.name, e.name FROM dept d ,employee e WHERE d.manager = e.manager 
+
+********** SQL is **********
+SELECT d.name, e.name FROM dept d ,employee e WHERE d.manager = e.manager ;
+## DB result ##
+File encoding: UTF-8
+ExecTime: 845msec
+// completed normally //
+//Entering SuperSQL System//
+[Parser:Parser] filename = /Users/tabata/Documents/workspace/NewSSQL-maven/test_queries/DM_All_queries/r3.ssql
+
+GENERATE HTML
+{'部署名','マネージャー'}!
+[ d.name, e.name ]!
+FROM dept d, employee e
+WHERE d.manager=e.id
+Schema is [[0, 1]]
+le0 is [HTMLC2, [HTMLC1, [部署名], [マネージャー]], [HTMLG2, [HTMLC1, [0], [1]]]]
+Schema: [[0, 1]]
+SELECT d.name, e.name FROM dept d ,employee e WHERE d.manager = e.id 
+
+********** SQL is **********
+SELECT d.name, e.name FROM dept d ,employee e WHERE d.manager = e.id ;
+## DB result ##
+File encoding: UTF-8
+ExecTime: 850msec
+// completed normally //
+//Entering SuperSQL System//
+[Parser:Parser] filename = /Users/tabata/Documents/workspace/NewSSQL-maven/test_queries/DM_All_queries/r4.ssql
+
+GENERATE HTML
+[ d.name, e1.name, [ e2.name ]! ]!
+FROM dept d, employee e1, employee e2
+WHERE d.manager=e2.manager and e1.id=e2.manager
+Schema is [[0, 1, [2]]]
+le0 is [HTMLG2, [HTMLC1, [0], [1], [HTMLG2, [2]]]]
+Schema: [[0, 1, [2]]]
+SELECT d.name, e1.name, e2.name FROM dept d ,employee e1 ,employee e2 WHERE d.manager = e2.manager
+
+********** SQL is **********
+SELECT d.name, e1.name, e2.name FROM dept d ,employee e1 ,employee e2 WHERE d.manager = e2.manager AND e1.id = e2.manager ;
+## DB result ##
+File encoding: UTF-8
+ExecTime: 1000msec
+// completed normally //
+//Entering SuperSQL System//
+[Parser:Parser] filename = /Users/tabata/Documents/workspace/NewSSQL-maven/test_queries/DM_All_queries/r5.ssql
+
+GENERATE HTML
+[e.name@{color='red'}, e.salary@{bgcolor='yellow'}]!
+FROM employee e
+Schema is [[0, 1]]
+le0 is [HTMLG2, [HTMLC1, [0], [1]]]
+Schema: [[0, 1]]
+
+********** SQL is **********
+SELECT e.name, e.salary FROM employee e;
+## DB result ##
+File encoding: UTF-8
+ExecTime: 902msec
+// completed normally //
+//Entering SuperSQL System//
+[Parser:Parser] filename = /Users/tabata/Documents/workspace/NewSSQL-maven/test_queries/DM_All_queries/r6.ssql
+
+GENERATE HTML
+[d.name, [i.name@{color='blue', width='200'}]!]!
+FROM dept d, item i
+WHERE i.dept=d.id
+Schema is [[0, [1]]]
+le0 is [HTMLG2, [HTMLC1, [0], [HTMLG2, [1]]]]
+Schema: [[0, [1]]]
+SELECT d.name, i.name FROM dept d ,item i WHERE i.dept = d.id 
+
+********** SQL is **********
+SELECT d.name, i.name FROM dept d ,item i WHERE i.dept = d.id ;
+## DB result ##
+File encoding: UTF-8
+ExecTime: 1167msec
+// completed normally //
+//Entering SuperSQL System//
+[Parser:Parser] filename = /Users/tabata/Documents/workspace/NewSSQL-maven/test_queries/DM_All_queries/r7.ssql
+
+GENERATE HTML
+[e.name, image(e.pict, './picture')@{width='200'}]!
+FROM employee e
+Schema is [[0, 1]]
+le0 is [HTMLG2, [HTMLC1, [0], [1, ./picture]]]
+Schema: [[0, 1]]
+
+********** SQL is **********
+SELECT e.name, e.pict FROM employee e;
+## DB result ##
+File encoding: UTF-8
+ExecTime: 1000msec
+// completed normally //
+//Entering SuperSQL System//
+[Parser:Parser] filename = /Users/tabata/Documents/workspace/NewSSQL-maven/test_queries/DM_All_queries/r8.ssql
+
+GENERATE HTML
+[e.name % {e.salary, e.syear}]!
+FROM employee e
+Schema is [[0, 1, 2]]
+le0 is [HTMLG2, [HTMLC3, [0], [HTMLC1, [1], [2]]]]
+Schema: [[0, 1, 2]]
+
+********** SQL is **********
+SELECT e.name, e.salary, e.syear FROM employee e;
+## DB result ##
+File encoding: UTF-8
+ExecTime: 862msec
+// completed normally //
+//Entering SuperSQL System//
+[Parser:Parser] filename = /Users/tabata/Documents/workspace/NewSSQL-maven/test_queries/DM_All_queries/r9-1.ssql
+
+GENERATE HTML
+[link(e.name, 'r9-2.ssql', e.id)]!
+FROM employee e
+Schema is [[0, 1]]
+le0 is [HTMLG2, [0, r9-2.ssql, 1]]
+Schema: [[0, 1]]
+
+********** SQL is **********
+SELECT e.name, e.id FROM employee e;
+## DB result ##
+File encoding: UTF-8
+ExecTime: 1087msec
+// completed normally //
+//Entering SuperSQL System//
+[Parser:Parser] filename = /Users/tabata/Documents/workspace/NewSSQL-maven/test_queries/DM_All_queries/r9-2.ssql
+FOREACH e.id
+
+GENERATE HTML
+[e.salary, e.syear]!
+FROM employee e
+[prefix, [[fix, [[foreach, [FOREACH, [operand, [[table_alias, [[any_name, [e]]]], ., [column_name, [[any_name, [id]]]]]]]]]]]]
+e.id
+Schema is [[0, [1, 2]]]
+le0 is [HTMLG3, [HTMLC0, [0], [HTMLG2, [HTMLC1, [1], [2]]]]]
+Schema: [[0, [1, 2]]]
+
+********** SQL is **********
+SELECT e.id, e.salary, e.syear FROM employee e;
+## DB result ##
+ExecTime: 1029msec
+// completed normally //

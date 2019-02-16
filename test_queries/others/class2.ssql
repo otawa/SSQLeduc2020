@@ -1,0 +1,27 @@
+
+GENERATE HTML
+	[
+	e.id@{class=AAA, color=green}!
+	{"A", "B"}@{width=700}!
+   {"A"@{bgcolor=red, class="BBB1"}, "B"@{bgcolor=red, class="BBB2"}}!  
+	{"A", "B"}@{bgcolor=red, class="BBB"}!
+	{e.id, "B"}@{bgcolor=red, class="CCC"}!
+	link(e.name@{bgcolor=gold, class=DDD}, file="Q3.ssql", att=e.id)!
+	"A"@{class="EEE", color=blue}
+	]! 
+FROM employee e
+
+
+/*
+例えば、
+{A, B}@{width=100}
+と書かれていた場合に、
+{A@{width=100}, B@{width=100}}
+に変換すれば良いかと言われると、「×」なので、
+
+{A, B}@{bgcolor=red, class="BBB"}
+	↓
+{A@{bgcolor=red, class="BBB"}, B@{bgcolor=red, class="BBB"}}
+
+と、一概にすることは出来ないですね(^^;
+*/

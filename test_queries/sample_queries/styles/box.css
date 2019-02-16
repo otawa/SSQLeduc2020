@@ -1,0 +1,83 @@
+.box {
+display: flex;
+}
+
+.flex1 {
+flex: 1;
+}
+
+.flex2 {
+flex: 2;
+}
+
+/* 
+Box direction control. By default direct children are
+displayed horizontally. (display: box default)
+vertical : direct children will be displayed vertically.
+
+Note : horizontal is often used as a default container.
+*/
+.horizontal {
+	flex-flow: row;
+}
+.vertical {
+	flex-flow: column;
+}
+
+.half_space { width: 50%; }
+
+.hidden { display: none !important; }
+
+.bordered{
+	border: 1px solid;
+}
+
+.con1{
+	align-items: center;
+	border: 1px solid;
+	padding: 3px;
+}
+
+.con2{
+	border: 1px solid;
+	padding: 3px;
+}
+
+.con3:first-child{
+
+}
+
+.con3{
+	border: 1px solid;
+	padding: 3px;
+}
+
+.group1{
+	align-items:flex-start;
+	flex-wrap: wrap;
+}
+.group2{
+	align-items:flex-start;
+}
+
+.group1 > *{
+	margin:5px;
+}
+
+.group2 > *{
+	margin:5px;
+}
+
+.att{
+	margin:5px;
+	border: 1px solid;
+	padding: 3px;
+}
+
+.link{
+	align-content: flex-start;
+}
+
+input[type="submit"]{
+	align-self:flex-start;
+}

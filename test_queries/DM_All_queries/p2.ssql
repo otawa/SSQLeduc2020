@@ -1,0 +1,12 @@
+generate html 
+{[(asc1) s.city@{width=50},
+   (asc2) d.floor||'F'@{width=30},
+   (asc3) d.name@{width=130,
+               bgcolor='yellow'},
+      m.name@{width=100,
+		bgcolor='azure'},
+      i.name@{width=120}]!
+                 @{bgcolor='beige'}
+}@{cssfile='winter.css'}
+from dept d, employee m, item i, store s
+where d.manager=m.id and d.id=i.dept and s.id=d.store

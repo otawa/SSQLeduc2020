@@ -1,0 +1,27 @@
+[クエリを実行]
+■実行ファイル: /Users/taji/Documents/workspace/NewSSQL/test_queries/DM_All_queries/r10.ssql
+
+＜詳細＞
+//Entering SuperSQL System//
+[Parser:Parser] filename = /Users/taji/Documents/workspace/NewSSQL/test_queries/DM_All_queries/r10.ssql
+
+GENERATE HTML
+[(asc1)d.id, d.name, [i.name, (desc2)i.price]! ]!
+FROM dept d, item i
+WHERE i.dept=d.id
+[root, [[operand, [[grouper, [[, [exp, [[d_exp, [[v_exp, [[h_exp, [[operand, [[sorting, [(, asc1, )]], [table_alias, [[any_name, [d]]]], ., [column_name, [[any_name, [id]]]]]], ,, [operand, [[table_alias, [[any_name, [d]]]], ., [column_name, [[any_name, [name]]]]]], ,, [operand, [[grouper, [[, [exp, [[d_exp, [[v_exp, [[h_exp, [[operand, [[table_alias, [[any_name, [i]]]], ., [column_name, [[any_name, [name]]]]]], ,, [operand, [[sorting, [(, desc2, )]], [table_alias, [[any_name, [i]]]], ., [column_name, [[any_name, [price]]]]]]]]]]]]]], ], !]]]]]]]]]]]], ], !]]]]]]
+Schema is [[0, 1, [2, 3]]]
+le0 is [HTMLG2, [HTMLC1, [0], [1], [HTMLG2, [HTMLC1, [2], [3]]]]]
+Schema: [[0, 1, [2, 3]]]
+
+********** SQL is **********
+SELECT d.id, d.name, i.name, i.price FROM dept d , item i WHERE i.dept = d.id ;
+## DB result ##
+[[14, 宝飾品, イヤリング, 11000], [26, 寝具, バスタオル, 2500], [49, おもちゃ, 迷路のおもちゃ, 3200], [36, 書籍, 時計の本, 198], [10, 駄菓子屋, 300g入りのあめ, 500], [60, スポーツ用品, ジャケット, 3295], [65, 紳士カジュアル, ジーンズ, 825], [58, 紳士服, シャツ, 1650], [26, 寝具, ツインベッド用シーツ, 4000], [43, 子供服, 子供用デニムスーツ, 5000], [26, 寝具, 高級シーツ, 6000], [63, 婦人服, スラックス, 9800], [14, 宝飾品, 金の指輪, 40000], [10, 駄菓子屋, 600g入りあめ, 800], [60, スポーツ用品, 野球ボール, 500], [1, バーゲンコーナー, 洗剤, 500], [43, 子供服, ベルボトムジーンズ, 3000], [1, バーゲンコーナー, ABCブロック, 1980], [35, 書籍, FeelBook, 2000], [65, 紳士カジュアル, ジャンパー, 4000]]
+12
+SELECT d.id, d.name, i.name, i.price FROM dept d , item i WHERE i.dept = d.id ;
+File encoding: UTF-8
+ExecTime: 1145msec
+// completed normally //
+結果: 成功
+

@@ -1,0 +1,4 @@
+GENERATE HTML
+[m.name, [e.name@{width=200}! {e.salary||'円'}@{width=200}]!]!
+from employee e, employee m
+where e.manager = m.id
