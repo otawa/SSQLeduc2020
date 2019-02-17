@@ -644,8 +644,8 @@ K_SUM : S U M ;
 //FUNC2 : [a-zA-Z]+(WS)*'[' ;
 
 C0  : '?' ;
-C1  : '!' ;
-C2  : ',' ;
+C1  : ',' ;
+C2  : '!' ;
 C3  : '%' ;
 DOT : '.' ;
 OPEN_PARENTHESE : '(' ;

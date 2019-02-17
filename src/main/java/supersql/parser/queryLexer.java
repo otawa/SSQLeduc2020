@@ -76,7 +76,7 @@ public class queryLexer extends Lexer {
 		null, null, null, null, null, null, null, null, null, null, null, null, 
 		null, null, null, null, null, null, null, null, null, null, null, null, 
 		null, null, null, null, null, null, null, null, null, null, null, "'?'", 
-		"'!'", "','", "'%'", "'.'", "'('", "')'", "'['", "']'", "'{'", "'}'", 
+		"','", "'!'", "'%'", "'.'", "'('", "')'", "'['", "']'", "'{'", "'}'", 
 		"';'"
 	};
 	private static final String[] _SYMBOLIC_NAMES = {
@@ -458,7 +458,7 @@ public class queryLexer extends Lexer {
 		"\u010d\u0087\2\u02f4\u02f5\5\u00ff\u0080\2\u02f5\u02f6\5\u010b\u0086\2"+
 		"\u02f6\u00b4\3\2\2\2\u02f7\u02f8\5\u0109\u0085\2\u02f8\u02f9\5\u010d\u0087"+
 		"\2\u02f9\u02fa\5\u00fd\177\2\u02fa\u00b6\3\2\2\2\u02fb\u02fc\7A\2\2\u02fc"+
-		"\u00b8\3\2\2\2\u02fd\u02fe\7#\2\2\u02fe\u00ba\3\2\2\2\u02ff\u0300\7.\2"+
+		"\u00b8\3\2\2\2\u02fd\u02fe\7.\2\2\u02fe\u00ba\3\2\2\2\u02ff\u0300\7#\2"+
 		"\2\u0300\u00bc\3\2\2\2\u0301\u0302\7\'\2\2\u0302\u00be\3\2\2\2\u0303\u0304"+
 		"\7\60\2\2\u0304\u00c0\3\2\2\2\u0305\u0306\7*\2\2\u0306\u00c2\3\2\2\2\u0307"+
 		"\u0308\7+\2\2\u0308\u00c4\3\2\2\2\u0309\u030a\7]\2\2\u030a\u00c6\3\2\2"+

@@ -81,7 +81,7 @@ public class queryParser extends Parser {
 		null, null, null, null, null, null, null, null, null, null, null, null, 
 		null, null, null, null, null, null, null, null, null, null, null, null, 
 		null, null, null, null, null, null, null, null, null, null, null, "'?'", 
-		"'!'", "','", "'%'", "'.'", "'('", "')'", "'['", "']'", "'{'", "'}'", 
+		"','", "'!'", "'%'", "'.'", "'('", "')'", "'['", "']'", "'{'", "'}'", 
 		"';'"
 	};
 	private static final String[] _SYMBOLIC_NAMES = {
@@ -1398,12 +1398,12 @@ public class queryParser extends Parser {
 			setState(295);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			while (_la==C2) {
+			while (_la==C1) {
 				{
 				{
 				{
 				setState(288);
-				match(C2);
+				match(C1);
 				}
 				setState(291);
 				switch ( getInterpreter().adaptivePredict(_input,28,_ctx) ) {
@@ -1513,11 +1513,11 @@ public class queryParser extends Parser {
 				setState(314);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
-				while (_la==C2) {
+				while (_la==C1) {
 					{
 					{
 					setState(307);
-					match(C2);
+					match(C1);
 					setState(310);
 					switch ( getInterpreter().adaptivePredict(_input,31,_ctx) ) {
 					case 1:
@@ -2350,11 +2350,11 @@ public class queryParser extends Parser {
 				setState(412);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
-				while (_la==C2) {
+				while (_la==C1) {
 					{
 					{
 					setState(408);
-					match(C2);
+					match(C1);
 					setState(409);
 					common_table_expression();
 					}
@@ -2397,11 +2397,11 @@ public class queryParser extends Parser {
 				setState(433);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
-				while (_la==C2) {
+				while (_la==C1) {
 					{
 					{
 					setState(429);
-					match(C2);
+					match(C1);
 					setState(430);
 					ordering_term();
 					}
@@ -2423,11 +2423,11 @@ public class queryParser extends Parser {
 				expr(0);
 				setState(442);
 				_la = _input.LA(1);
-				if (_la==K_OFFSET || _la==C2) {
+				if (_la==K_OFFSET || _la==C1) {
 					{
 					setState(440);
 					_la = _input.LA(1);
-					if ( !(_la==K_OFFSET || _la==C2) ) {
+					if ( !(_la==K_OFFSET || _la==C1) ) {
 					_errHandler.recoverInline(this);
 					} else {
 						consume();
@@ -2522,11 +2522,11 @@ public class queryParser extends Parser {
 				setState(455);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
-				while (_la==C2) {
+				while (_la==C1) {
 					{
 					{
 					setState(451);
-					match(C2);
+					match(C1);
 					setState(452);
 					result_column();
 					}
@@ -2550,11 +2550,11 @@ public class queryParser extends Parser {
 				setState(466);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
-				while (_la==C2) {
+				while (_la==C1) {
 					{
 					{
 					setState(462);
-					match(C2);
+					match(C1);
 					setState(463);
 					table_or_subquery();
 					}
@@ -2654,11 +2654,11 @@ public class queryParser extends Parser {
 						setState(485);
 						_errHandler.sync(this);
 						_la = _input.LA(1);
-						while (_la==C2) {
+						while (_la==C1) {
 							{
 							{
 							setState(481);
-							match(C2);
+							match(C1);
 							setState(482);
 							expr(0);
 							}
@@ -2694,11 +2694,11 @@ public class queryParser extends Parser {
 					setState(501);
 					_errHandler.sync(this);
 					_la = _input.LA(1);
-					while (_la==C2) {
+					while (_la==C1) {
 						{
 						{
 						setState(497);
-						match(C2);
+						match(C1);
 						setState(498);
 						expr(0);
 						}
@@ -2712,11 +2712,11 @@ public class queryParser extends Parser {
 					setState(519);
 					_errHandler.sync(this);
 					_la = _input.LA(1);
-					while (_la==C2) {
+					while (_la==C1) {
 						{
 						{
 						setState(505);
-						match(C2);
+						match(C1);
 						setState(506);
 						match(OPEN_PARENTHESE);
 						setState(507);
@@ -2724,11 +2724,11 @@ public class queryParser extends Parser {
 						setState(512);
 						_errHandler.sync(this);
 						_la = _input.LA(1);
-						while (_la==C2) {
+						while (_la==C1) {
 							{
 							{
 							setState(508);
-							match(C2);
+							match(C1);
 							setState(509);
 							expr(0);
 							}
@@ -2781,11 +2781,11 @@ public class queryParser extends Parser {
 					setState(535);
 					_errHandler.sync(this);
 					_la = _input.LA(1);
-					while (_la==C2) {
+					while (_la==C1) {
 						{
 						{
 						setState(531);
-						match(C2);
+						match(C1);
 						setState(532);
 						expr(0);
 						}
@@ -2819,11 +2819,11 @@ public class queryParser extends Parser {
 					setState(549);
 					_errHandler.sync(this);
 					_la = _input.LA(1);
-					while (_la==C2) {
+					while (_la==C1) {
 						{
 						{
 						setState(545);
-						match(C2);
+						match(C1);
 						setState(546);
 						expr(0);
 						}
@@ -2837,11 +2837,11 @@ public class queryParser extends Parser {
 					setState(567);
 					_errHandler.sync(this);
 					_la = _input.LA(1);
-					while (_la==C2) {
+					while (_la==C1) {
 						{
 						{
 						setState(553);
-						match(C2);
+						match(C1);
 						setState(554);
 						match(OPEN_PARENTHESE);
 						setState(555);
@@ -2849,11 +2849,11 @@ public class queryParser extends Parser {
 						setState(560);
 						_errHandler.sync(this);
 						_la = _input.LA(1);
-						while (_la==C2) {
+						while (_la==C1) {
 							{
 							{
 							setState(556);
-							match(C2);
+							match(C1);
 							setState(557);
 							expr(0);
 							}
@@ -3100,7 +3100,7 @@ public class queryParser extends Parser {
 				case K_USING:
 				case K_VALUES:
 				case K_WHERE:
-				case C2:
+				case C1:
 				case CLOSE_PARENTHESE:
 				case SEMICOLON:
 					break;
@@ -3123,11 +3123,11 @@ public class queryParser extends Parser {
 					setState(613);
 					_errHandler.sync(this);
 					_la = _input.LA(1);
-					while (_la==C2) {
+					while (_la==C1) {
 						{
 						{
 						setState(609);
-						match(C2);
+						match(C1);
 						setState(610);
 						table_or_subquery();
 						}
@@ -3398,11 +3398,11 @@ public class queryParser extends Parser {
 				setState(648);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
-				while (_la==C2) {
+				while (_la==C1) {
 					{
 					{
 					setState(644);
-					match(C2);
+					match(C1);
 					setState(645);
 					common_table_expression();
 					}
@@ -3445,11 +3445,11 @@ public class queryParser extends Parser {
 				setState(669);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
-				while (_la==C2) {
+				while (_la==C1) {
 					{
 					{
 					setState(665);
-					match(C2);
+					match(C1);
 					setState(666);
 					ordering_term();
 					}
@@ -3471,11 +3471,11 @@ public class queryParser extends Parser {
 				expr(0);
 				setState(678);
 				_la = _input.LA(1);
-				if (_la==K_OFFSET || _la==C2) {
+				if (_la==K_OFFSET || _la==C1) {
 					{
 					setState(676);
 					_la = _input.LA(1);
-					if ( !(_la==K_OFFSET || _la==C2) ) {
+					if ( !(_la==K_OFFSET || _la==C1) ) {
 					_errHandler.recoverInline(this);
 					} else {
 						consume();
@@ -3570,11 +3570,11 @@ public class queryParser extends Parser {
 				setState(691);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
-				while (_la==C2) {
+				while (_la==C1) {
 					{
 					{
 					setState(687);
-					match(C2);
+					match(C1);
 					setState(688);
 					result_column();
 					}
@@ -3598,11 +3598,11 @@ public class queryParser extends Parser {
 				setState(702);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
-				while (_la==C2) {
+				while (_la==C1) {
 					{
 					{
 					setState(698);
-					match(C2);
+					match(C1);
 					setState(699);
 					table_or_subquery();
 					}
@@ -3835,11 +3835,11 @@ public class queryParser extends Parser {
 		try {
 			setState(752);
 			switch (_input.LA(1)) {
-			case C2:
+			case C1:
 				enterOuterAlt(_localctx, 1);
 				{
 				setState(731);
-				match(C2);
+				match(C1);
 				}
 				break;
 			case K_CROSS:
@@ -3997,11 +3997,11 @@ public class queryParser extends Parser {
 				setState(763);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
-				while (_la==C2) {
+				while (_la==C1) {
 					{
 					{
 					setState(759);
-					match(C2);
+					match(C1);
 					setState(760);
 					column_name();
 					}
@@ -4076,11 +4076,11 @@ public class queryParser extends Parser {
 				setState(777);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
-				while (_la==C2) {
+				while (_la==C1) {
 					{
 					{
 					setState(773);
-					match(C2);
+					match(C1);
 					setState(774);
 					column_name();
 					}
@@ -4804,11 +4804,11 @@ public class queryParser extends Parser {
 								setState(941);
 								_errHandler.sync(this);
 								_la = _input.LA(1);
-								while (_la==C2) {
+								while (_la==C1) {
 									{
 									{
 									setState(937);
-									match(C2);
+									match(C1);
 									setState(938);
 									expr(0);
 									}
@@ -5133,7 +5133,7 @@ public class queryParser extends Parser {
 				setState(976);
 				signed_number();
 				setState(977);
-				match(C2);
+				match(C1);
 				setState(978);
 				signed_number();
 				setState(979);
@@ -5822,7 +5822,7 @@ public class queryParser extends Parser {
 					consume();
 				}
 				setState(1018);
-				match(C2);
+				match(C1);
 				setState(1019);
 				error_message();
 				}
@@ -6011,7 +6011,7 @@ public class queryParser extends Parser {
 		"\3\65\3\65\3\66\3\66\3\67\3\67\5\67\u03f0\n\67\38\38\39\59\u03f5\n9\3"+
 		"9\39\3:\3:\3:\3:\3:\3:\5:\u03ff\n:\3:\3:\3;\3;\3;\2\4&N<\2\4\6\b\n\f\16"+
 		"\20\22\24\26\30\32\34\36 \"$&(*,.\60\62\64\668:<>@BDFHJLNPRTVXZ\\^`bd"+
-		"fhjlnprt\2\21\4\2\7\n``\4\2EE__\4\2\31\31\'\'\4\2\27\27\31\\\4\2\34\34"+
+		"fhjlnprt\2\21\4\2\7\n``\4\2EE^^\4\2\31\31\'\'\4\2\27\27\31\\\4\2\34\34"+
 		"&&\4\2\7\b``\3\2\t\n\4\2\5\5\13\r\3\2\16\21\6\2\60\60==??LL\6\2#%DDjk"+
 		"nn\5\2\t\n\26\26BB\3\2X\\\3\2mn\5\2\27\27--NN\u048f\2v\3\2\2\2\4}\3\2"+
 		"\2\2\6\u0082\3\2\2\2\b\u009d\3\2\2\2\n\u00a5\3\2\2\2\f\u00ad\3\2\2\2\16"+
@@ -6084,13 +6084,13 @@ public class queryParser extends Parser {
 		"\u0114\3\2\2\2\u0118\35\3\2\2\2\u0119\u011b\7\4\2\2\u011a\u0119\3\2\2"+
 		"\2\u011a\u011b\3\2\2\2\u011b\u011c\3\2\2\2\u011c\u011d\5X-\2\u011d\u0120"+
 		"\7b\2\2\u011e\u0121\5\b\5\2\u011f\u0121\5\22\n\2\u0120\u011e\3\2\2\2\u0120"+
-		"\u011f\3\2\2\2\u0121\u0129\3\2\2\2\u0122\u0125\7_\2\2\u0123\u0126\5\b"+
+		"\u011f\3\2\2\2\u0121\u0129\3\2\2\2\u0122\u0125\7^\2\2\u0123\u0126\5\b"+
 		"\5\2\u0124\u0126\5\22\n\2\u0125\u0123\3\2\2\2\u0125\u0124\3\2\2\2\u0126"+
 		"\u0128\3\2\2\2\u0127\u0122\3\2\2\2\u0128\u012b\3\2\2\2\u0129\u0127\3\2"+
 		"\2\2\u0129\u012a\3\2\2\2\u012a\u012c\3\2\2\2\u012b\u0129\3\2\2\2\u012c"+
 		"\u012d\7c\2\2\u012d\37\3\2\2\2\u012e\u012f\7\5\2\2\u012f\u0130\5X-\2\u0130"+
 		"\u0141\7b\2\2\u0131\u0134\5\b\5\2\u0132\u0134\5\22\n\2\u0133\u0131\3\2"+
-		"\2\2\u0133\u0132\3\2\2\2\u0134\u013c\3\2\2\2\u0135\u0138\7_\2\2\u0136"+
+		"\2\2\u0133\u0132\3\2\2\2\u0134\u013c\3\2\2\2\u0135\u0138\7^\2\2\u0136"+
 		"\u0139\5\b\5\2\u0137\u0139\5\22\n\2\u0138\u0136\3\2\2\2\u0138\u0137\3"+
 		"\2\2\2\u0139\u013b\3\2\2\2\u013a\u0135\3\2\2\2\u013b\u013e\3\2\2\2\u013c"+
 		"\u013a\3\2\2\2\u013c\u013d\3\2\2\2\u013d\u0140\3\2\2\2\u013e\u013c\3\2"+
@@ -6122,39 +6122,39 @@ public class queryParser extends Parser {
 		"\3\2\2\2\u0191\u0194\5\62\32\2\u0192\u0194\5> \2\u0193\u0191\3\2\2\2\u0193"+
 		"\u0192\3\2\2\2\u0194\61\3\2\2\2\u0195\u0197\7V\2\2\u0196\u0198\7K\2\2"+
 		"\u0197\u0196\3\2\2\2\u0197\u0198\3\2\2\2\u0198\u0199\3\2\2\2\u0199\u019e"+
-		"\5J&\2\u019a\u019b\7_\2\2\u019b\u019d\5J&\2\u019c\u019a\3\2\2\2\u019d"+
+		"\5J&\2\u019a\u019b\7^\2\2\u019b\u019d\5J&\2\u019c\u019a\3\2\2\2\u019d"+
 		"\u01a0\3\2\2\2\u019e\u019c\3\2\2\2\u019e\u019f\3\2\2\2\u019f\u01a2\3\2"+
 		"\2\2\u01a0\u019e\3\2\2\2\u01a1\u0195\3\2\2\2\u01a1\u01a2\3\2\2\2\u01a2"+
 		"\u01a3\3\2\2\2\u01a3\u01a9\5\64\33\2\u01a4\u01a5\5B\"\2\u01a5\u01a6\5"+
 		"\64\33\2\u01a6\u01a8\3\2\2\2\u01a7\u01a4\3\2\2\2\u01a8\u01ab\3\2\2\2\u01a9"+
 		"\u01a7\3\2\2\2\u01a9\u01aa\3\2\2\2\u01aa\u01b6\3\2\2\2\u01ab\u01a9\3\2"+
 		"\2\2\u01ac\u01ad\7H\2\2\u01ad\u01ae\7\36\2\2\u01ae\u01b3\5L\'\2\u01af"+
-		"\u01b0\7_\2\2\u01b0\u01b2\5L\'\2\u01b1\u01af\3\2\2\2\u01b2\u01b5\3\2\2"+
+		"\u01b0\7^\2\2\u01b0\u01b2\5L\'\2\u01b1\u01af\3\2\2\2\u01b2\u01b5\3\2\2"+
 		"\2\u01b3\u01b1\3\2\2\2\u01b3\u01b4\3\2\2\2\u01b4\u01b7\3\2\2\2\u01b5\u01b3"+
 		"\3\2\2\2\u01b6\u01ac\3\2\2\2\u01b6\u01b7\3\2\2\2\u01b7\u01be\3\2\2\2\u01b8"+
 		"\u01b9\7>\2\2\u01b9\u01bc\5N(\2\u01ba\u01bb\t\3\2\2\u01bb\u01bd\5N(\2"+
 		"\u01bc\u01ba\3\2\2\2\u01bc\u01bd\3\2\2\2\u01bd\u01bf\3\2\2\2\u01be\u01b8"+
 		"\3\2\2\2\u01be\u01bf\3\2\2\2\u01bf\63\3\2\2\2\u01c0\u01c2\7O\2\2\u01c1"+
 		"\u01c3\t\4\2\2\u01c2\u01c1\3\2\2\2\u01c2\u01c3\3\2\2\2\u01c3\u01c4\3\2"+
-		"\2\2\u01c4\u01c9\58\35\2\u01c5\u01c6\7_\2\2\u01c6\u01c8\58\35\2\u01c7"+
+		"\2\2\u01c4\u01c9\58\35\2\u01c5\u01c6\7^\2\2\u01c6\u01c8\58\35\2\u01c7"+
 		"\u01c5\3\2\2\2\u01c8\u01cb\3\2\2\2\u01c9\u01c7\3\2\2\2\u01c9\u01ca\3\2"+
 		"\2\2\u01ca\u01cd\3\2\2\2\u01cb\u01c9\3\2\2\2\u01cc\u01c0\3\2\2\2\u01cc"+
 		"\u01cd\3\2\2\2\u01cd\u01ce\3\2\2\2\u01ce\u01d8\7/\2\2\u01cf\u01d4\5:\36"+
-		"\2\u01d0\u01d1\7_\2\2\u01d1\u01d3\5:\36\2\u01d2\u01d0\3\2\2\2\u01d3\u01d6"+
+		"\2\u01d0\u01d1\7^\2\2\u01d1\u01d3\5:\36\2\u01d2\u01d0\3\2\2\2\u01d3\u01d6"+
 		"\3\2\2\2\u01d4\u01d2\3\2\2\2\u01d4\u01d5\3\2\2\2\u01d5\u01d9\3\2\2\2\u01d6"+
 		"\u01d4\3\2\2\2\u01d7\u01d9\5D#\2\u01d8\u01cf\3\2\2\2\u01d8\u01d7\3\2\2"+
 		"\2\u01d9\u01db\3\2\2\2\u01da\u01dc\5\66\34\2\u01db\u01da\3\2\2\2\u01db"+
 		"\u01dc\3\2\2\2\u01dc\65\3\2\2\2\u01dd\u01de\7U\2\2\u01de\u01df\5N(\2\u01df"+
 		"\u01ee\3\2\2\2\u01e0\u01e1\7\61\2\2\u01e1\u01e2\7\36\2\2\u01e2\u01e7\5"+
-		"N(\2\u01e3\u01e4\7_\2\2\u01e4\u01e6\5N(\2\u01e5\u01e3\3\2\2\2\u01e6\u01e9"+
+		"N(\2\u01e3\u01e4\7^\2\2\u01e4\u01e6\5N(\2\u01e5\u01e3\3\2\2\2\u01e6\u01e9"+
 		"\3\2\2\2\u01e7\u01e5\3\2\2\2\u01e7\u01e8\3\2\2\2\u01e8\u01ec\3\2\2\2\u01e9"+
 		"\u01e7\3\2\2\2\u01ea\u01eb\7\62\2\2\u01eb\u01ed\5N(\2\u01ec\u01ea\3\2"+
 		"\2\2\u01ec\u01ed\3\2\2\2\u01ed\u01ef\3\2\2\2\u01ee\u01e0\3\2\2\2\u01ee"+
 		"\u01ef\3\2\2\2\u01ef\u020d\3\2\2\2\u01f0\u01f1\7S\2\2\u01f1\u01f2\7b\2"+
-		"\2\u01f2\u01f7\5N(\2\u01f3\u01f4\7_\2\2\u01f4\u01f6\5N(\2\u01f5\u01f3"+
+		"\2\u01f2\u01f7\5N(\2\u01f3\u01f4\7^\2\2\u01f4\u01f6\5N(\2\u01f5\u01f3"+
 		"\3\2\2\2\u01f6\u01f9\3\2\2\2\u01f7\u01f5\3\2\2\2\u01f7\u01f8\3\2\2\2\u01f8"+
-		"\u01fa\3\2\2\2\u01f9\u01f7\3\2\2\2\u01fa\u0209\7c\2\2\u01fb\u01fc\7_\2"+
-		"\2\u01fc\u01fd\7b\2\2\u01fd\u0202\5N(\2\u01fe\u01ff\7_\2\2\u01ff\u0201"+
+		"\u01fa\3\2\2\2\u01f9\u01f7\3\2\2\2\u01fa\u0209\7c\2\2\u01fb\u01fc\7^\2"+
+		"\2\u01fc\u01fd\7b\2\2\u01fd\u0202\5N(\2\u01fe\u01ff\7^\2\2\u01ff\u0201"+
 		"\5N(\2\u0200\u01fe\3\2\2\2\u0201\u0204\3\2\2\2\u0202\u0200\3\2\2\2\u0202"+
 		"\u0203\3\2\2\2\u0203\u0205\3\2\2\2\u0204\u0202\3\2\2\2\u0205\u0206\7c"+
 		"\2\2\u0206\u0208\3\2\2\2\u0207\u01fb\3\2\2\2\u0208\u020b\3\2\2\2\u0209"+
@@ -6162,15 +6162,15 @@ public class queryParser extends Parser {
 		"\2\2\u020c\u01dd\3\2\2\2\u020c\u01f0\3\2\2\2\u020d\u023f\3\2\2\2\u020e"+
 		"\u020f\7U\2\2\u020f\u0211\5N(\2\u0210\u020e\3\2\2\2\u0210\u0211\3\2\2"+
 		"\2\u0211\u0212\3\2\2\2\u0212\u0213\7\61\2\2\u0213\u0214\7\36\2\2\u0214"+
-		"\u0219\5N(\2\u0215\u0216\7_\2\2\u0216\u0218\5N(\2\u0217\u0215\3\2\2\2"+
+		"\u0219\5N(\2\u0215\u0216\7^\2\2\u0216\u0218\5N(\2\u0217\u0215\3\2\2\2"+
 		"\u0218\u021b\3\2\2\2\u0219\u0217\3\2\2\2\u0219\u021a\3\2\2\2\u021a\u021e"+
 		"\3\2\2\2\u021b\u0219\3\2\2\2\u021c\u021d\7\62\2\2\u021d\u021f\5N(\2\u021e"+
 		"\u021c\3\2\2\2\u021e\u021f\3\2\2\2\u021f\u023d\3\2\2\2\u0220\u0221\7S"+
-		"\2\2\u0221\u0222\7b\2\2\u0222\u0227\5N(\2\u0223\u0224\7_\2\2\u0224\u0226"+
+		"\2\2\u0221\u0222\7b\2\2\u0222\u0227\5N(\2\u0223\u0224\7^\2\2\u0224\u0226"+
 		"\5N(\2\u0225\u0223\3\2\2\2\u0226\u0229\3\2\2\2\u0227\u0225\3\2\2\2\u0227"+
 		"\u0228\3\2\2\2\u0228\u022a\3\2\2\2\u0229\u0227\3\2\2\2\u022a\u0239\7c"+
-		"\2\2\u022b\u022c\7_\2\2\u022c\u022d\7b\2\2\u022d\u0232\5N(\2\u022e\u022f"+
-		"\7_\2\2\u022f\u0231\5N(\2\u0230\u022e\3\2\2\2\u0231\u0234\3\2\2\2\u0232"+
+		"\2\2\u022b\u022c\7^\2\2\u022c\u022d\7b\2\2\u022d\u0232\5N(\2\u022e\u022f"+
+		"\7^\2\2\u022f\u0231\5N(\2\u0230\u022e\3\2\2\2\u0231\u0234\3\2\2\2\u0232"+
 		"\u0230\3\2\2\2\u0232\u0233\3\2\2\2\u0233\u0235\3\2\2\2\u0234\u0232\3\2"+
 		"\2\2\u0235\u0236\7c\2\2\u0236\u0238\3\2\2\2\u0237\u022b\3\2\2\2\u0238"+
 		"\u023b\3\2\2\2\u0239\u0237\3\2\2\2\u0239\u023a\3\2\2\2\u023a\u023d\3\2"+
@@ -6188,7 +6188,7 @@ public class queryParser extends Parser {
 		"\u025f\3\2\2\2\u025a\u025b\7\66\2\2\u025b\u025c\7\36\2\2\u025c\u0260\5"+
 		"j\66\2\u025d\u025e\7B\2\2\u025e\u0260\7\66\2\2\u025f\u025a\3\2\2\2\u025f"+
 		"\u025d\3\2\2\2\u025f\u0260\3\2\2\2\u0260\u027e\3\2\2\2\u0261\u026b\7b"+
-		"\2\2\u0262\u0267\5:\36\2\u0263\u0264\7_\2\2\u0264\u0266\5:\36\2\u0265"+
+		"\2\2\u0262\u0267\5:\36\2\u0263\u0264\7^\2\2\u0264\u0266\5:\36\2\u0265"+
 		"\u0263\3\2\2\2\u0266\u0269\3\2\2\2\u0267\u0265\3\2\2\2\u0267\u0268\3\2"+
 		"\2\2\u0268\u026c\3\2\2\2\u0269\u0267\3\2\2\2\u026a\u026c\5D#\2\u026b\u0262"+
 		"\3\2\2\2\u026b\u026a\3\2\2\2\u026c\u026d\3\2\2\2\u026d\u0272\7c\2\2\u026e"+
@@ -6200,25 +6200,25 @@ public class queryParser extends Parser {
 		"\u027e\3\2\2\2\u027d\u0251\3\2\2\2\u027d\u0261\3\2\2\2\u027d\u0274\3\2"+
 		"\2\2\u027e;\3\2\2\2\u027f\u0280\t\5\2\2\u0280=\3\2\2\2\u0281\u0283\7V"+
 		"\2\2\u0282\u0284\7K\2\2\u0283\u0282\3\2\2\2\u0283\u0284\3\2\2\2\u0284"+
-		"\u0285\3\2\2\2\u0285\u028a\5J&\2\u0286\u0287\7_\2\2\u0287\u0289\5J&\2"+
+		"\u0285\3\2\2\2\u0285\u028a\5J&\2\u0286\u0287\7^\2\2\u0287\u0289\5J&\2"+
 		"\u0288\u0286\3\2\2\2\u0289\u028c\3\2\2\2\u028a\u0288\3\2\2\2\u028a\u028b"+
 		"\3\2\2\2\u028b\u028e\3\2\2\2\u028c\u028a\3\2\2\2\u028d\u0281\3\2\2\2\u028d"+
 		"\u028e\3\2\2\2\u028e\u028f\3\2\2\2\u028f\u0295\5@!\2\u0290\u0291\5B\""+
 		"\2\u0291\u0292\5@!\2\u0292\u0294\3\2\2\2\u0293\u0290\3\2\2\2\u0294\u0297"+
 		"\3\2\2\2\u0295\u0293\3\2\2\2\u0295\u0296\3\2\2\2\u0296\u02a2\3\2\2\2\u0297"+
 		"\u0295\3\2\2\2\u0298\u0299\7H\2\2\u0299\u029a\7\36\2\2\u029a\u029f\5L"+
-		"\'\2\u029b\u029c\7_\2\2\u029c\u029e\5L\'\2\u029d\u029b\3\2\2\2\u029e\u02a1"+
+		"\'\2\u029b\u029c\7^\2\2\u029c\u029e\5L\'\2\u029d\u029b\3\2\2\2\u029e\u02a1"+
 		"\3\2\2\2\u029f\u029d\3\2\2\2\u029f\u02a0\3\2\2\2\u02a0\u02a3\3\2\2\2\u02a1"+
 		"\u029f\3\2\2\2\u02a2\u0298\3\2\2\2\u02a2\u02a3\3\2\2\2\u02a3\u02aa\3\2"+
 		"\2\2\u02a4\u02a5\7>\2\2\u02a5\u02a8\5N(\2\u02a6\u02a7\t\3\2\2\u02a7\u02a9"+
 		"\5N(\2\u02a8\u02a6\3\2\2\2\u02a8\u02a9\3\2\2\2\u02a9\u02ab\3\2\2\2\u02aa"+
 		"\u02a4\3\2\2\2\u02aa\u02ab\3\2\2\2\u02ab?\3\2\2\2\u02ac\u02ae\7O\2\2\u02ad"+
 		"\u02af\t\4\2\2\u02ae\u02ad\3\2\2\2\u02ae\u02af\3\2\2\2\u02af\u02b0\3\2"+
-		"\2\2\u02b0\u02b5\58\35\2\u02b1\u02b2\7_\2\2\u02b2\u02b4\58\35\2\u02b3"+
+		"\2\2\u02b0\u02b5\58\35\2\u02b1\u02b2\7^\2\2\u02b2\u02b4\58\35\2\u02b3"+
 		"\u02b1\3\2\2\2\u02b4\u02b7\3\2\2\2\u02b5\u02b3\3\2\2\2\u02b5\u02b6\3\2"+
 		"\2\2\u02b6\u02b9\3\2\2\2\u02b7\u02b5\3\2\2\2\u02b8\u02ac\3\2\2\2\u02b8"+
 		"\u02b9\3\2\2\2\u02b9\u02ba\3\2\2\2\u02ba\u02c4\7/\2\2\u02bb\u02c0\5:\36"+
-		"\2\u02bc\u02bd\7_\2\2\u02bd\u02bf\5:\36\2\u02be\u02bc\3\2\2\2\u02bf\u02c2"+
+		"\2\u02bc\u02bd\7^\2\2\u02bd\u02bf\5:\36\2\u02be\u02bc\3\2\2\2\u02bf\u02c2"+
 		"\3\2\2\2\u02c0\u02be\3\2\2\2\u02c0\u02c1\3\2\2\2\u02c1\u02c5\3\2\2\2\u02c2"+
 		"\u02c0\3\2\2\2\u02c3\u02c5\5D#\2\u02c4\u02bb\3\2\2\2\u02c4\u02c3\3\2\2"+
 		"\2\u02c5\u02c7\3\2\2\2\u02c6\u02c8\5\66\34\2\u02c7\u02c6\3\2\2\2\u02c7"+
@@ -6229,7 +6229,7 @@ public class queryParser extends Parser {
 		"\u02d5\5:\36\2\u02d4\u02d2\3\2\2\2\u02d4\u02d3\3\2\2\2\u02d5\u02d6\3\2"+
 		"\2\2\u02d6\u02d7\5H%\2\u02d7\u02d9\3\2\2\2\u02d8\u02d1\3\2\2\2\u02d9\u02dc"+
 		"\3\2\2\2\u02da\u02d8\3\2\2\2\u02da\u02db\3\2\2\2\u02dbE\3\2\2\2\u02dc"+
-		"\u02da\3\2\2\2\u02dd\u02f3\7_\2\2\u02de\u02e0\7@\2\2\u02df\u02de\3\2\2"+
+		"\u02da\3\2\2\2\u02dd\u02f3\7^\2\2\u02de\u02e0\7@\2\2\u02df\u02de\3\2\2"+
 		"\2\u02df\u02e0\3\2\2\2\u02e0\u02ef\3\2\2\2\u02e1\u02e3\7<\2\2\u02e2\u02e4"+
 		"\7I\2\2\u02e3\u02e2\3\2\2\2\u02e3\u02e4\3\2\2\2\u02e4\u02f0\3\2\2\2\u02e5"+
 		"\u02e7\7M\2\2\u02e6\u02e8\7I\2\2\u02e7\u02e6\3\2\2\2\u02e7\u02e8\3\2\2"+
@@ -6239,12 +6239,12 @@ public class queryParser extends Parser {
 		"\3\2\2\2\u02ef\u02ed\3\2\2\2\u02ef\u02ee\3\2\2\2\u02ef\u02f0\3\2\2\2\u02f0"+
 		"\u02f1\3\2\2\2\u02f1\u02f3\7;\2\2\u02f2\u02dd\3\2\2\2\u02f2\u02df\3\2"+
 		"\2\2\u02f3G\3\2\2\2\u02f4\u02f5\7F\2\2\u02f5\u0303\5N(\2\u02f6\u02f7\7"+
-		"R\2\2\u02f7\u02f8\7b\2\2\u02f8\u02fd\5f\64\2\u02f9\u02fa\7_\2\2\u02fa"+
+		"R\2\2\u02f7\u02f8\7b\2\2\u02f8\u02fd\5f\64\2\u02f9\u02fa\7^\2\2\u02fa"+
 		"\u02fc\5f\64\2\u02fb\u02f9\3\2\2\2\u02fc\u02ff\3\2\2\2\u02fd\u02fb\3\2"+
 		"\2\2\u02fd\u02fe\3\2\2\2\u02fe\u0300\3\2\2\2\u02ff\u02fd\3\2\2\2\u0300"+
 		"\u0301\7c\2\2\u0301\u0303\3\2\2\2\u0302\u02f4\3\2\2\2\u0302\u02f6\3\2"+
 		"\2\2\u0302\u0303\3\2\2\2\u0303I\3\2\2\2\u0304\u0310\5b\62\2\u0305\u0306"+
-		"\7b\2\2\u0306\u030b\5f\64\2\u0307\u0308\7_\2\2\u0308\u030a\5f\64\2\u0309"+
+		"\7b\2\2\u0306\u030b\5f\64\2\u0307\u0308\7^\2\2\u0308\u030a\5f\64\2\u0309"+
 		"\u0307\3\2\2\2\u030a\u030d\3\2\2\2\u030b\u0309\3\2\2\2\u030b\u030c\3\2"+
 		"\2\2\u030c\u030e\3\2\2\2\u030d\u030b\3\2\2\2\u030e\u030f\7c\2\2\u030f"+
 		"\u0311\3\2\2\2\u0310\u0305\3\2\2\2\u0310\u0311\3\2\2\2\u0311\u0312\3\2"+
@@ -6299,7 +6299,7 @@ public class queryParser extends Parser {
 		"\7D\2\2\u03a1\u039d\3\2\2\2\u03a1\u039e\3\2\2\2\u03a1\u039f\3\2\2\2\u03a2"+
 		"\u03be\3\2\2\2\u03a3\u03a5\f\6\2\2\u03a4\u03a6\7B\2\2\u03a5\u03a4\3\2"+
 		"\2\2\u03a5\u03a6\3\2\2\2\u03a6\u03a7\3\2\2\2\u03a7\u03bb\7\65\2\2\u03a8"+
-		"\u03b2\7b\2\2\u03a9\u03b3\5> \2\u03aa\u03af\5N(\2\u03ab\u03ac\7_\2\2\u03ac"+
+		"\u03b2\7b\2\2\u03a9\u03b3\5> \2\u03aa\u03af\5N(\2\u03ab\u03ac\7^\2\2\u03ac"+
 		"\u03ae\5N(\2\u03ad\u03ab\3\2\2\2\u03ae\u03b1\3\2\2\2\u03af\u03ad\3\2\2"+
 		"\2\u03af\u03b0\3\2\2\2\u03b0\u03b3\3\2\2\2\u03b1\u03af\3\2\2\2\u03b2\u03a9"+
 		"\3\2\2\2\u03b2\u03aa\3\2\2\2\u03b2\u03b3\3\2\2\2\u03b3\u03b4\3\2\2\2\u03b4"+
@@ -6316,7 +6316,7 @@ public class queryParser extends Parser {
 		"T+\2\u03c9\u03c8\3\2\2\2\u03ca\u03cb\3\2\2\2\u03cb\u03c9\3\2\2\2\u03cb"+
 		"\u03cc\3\2\2\2\u03cc\u03d7\3\2\2\2\u03cd\u03ce\7b\2\2\u03ce\u03cf\5p9"+
 		"\2\u03cf\u03d0\7c\2\2\u03d0\u03d8\3\2\2\2\u03d1\u03d2\7b\2\2\u03d2\u03d3"+
-		"\5p9\2\u03d3\u03d4\7_\2\2\u03d4\u03d5\5p9\2\u03d5\u03d6\7c\2\2\u03d6\u03d8"+
+		"\5p9\2\u03d3\u03d4\7^\2\2\u03d4\u03d5\5p9\2\u03d5\u03d6\7c\2\2\u03d6\u03d8"+
 		"\3\2\2\2\u03d7\u03cd\3\2\2\2\u03d7\u03d1\3\2\2\2\u03d7\u03d8\3\2\2\2\u03d8"+
 		"W\3\2\2\2\u03d9\u03da\5l\67\2\u03daY\3\2\2\2\u03db\u03dc\5\\/\2\u03dc"+
 		"[\3\2\2\2\u03dd\u03de\t\16\2\2\u03de]\3\2\2\2\u03df\u03e0\5l\67\2\u03e0"+
@@ -6327,7 +6327,7 @@ public class queryParser extends Parser {
 		"\u03ee\3\2\2\2\u03f0m\3\2\2\2\u03f1\u03f2\7n\2\2\u03f2o\3\2\2\2\u03f3"+
 		"\u03f5\t\b\2\2\u03f4\u03f3\3\2\2\2\u03f4\u03f5\3\2\2\2\u03f5\u03f6\3\2"+
 		"\2\2\u03f6\u03f7\7j\2\2\u03f7q\3\2\2\2\u03f8\u03f9\7J\2\2\u03f9\u03fe"+
-		"\7b\2\2\u03fa\u03ff\7\64\2\2\u03fb\u03fc\t\20\2\2\u03fc\u03fd\7_\2\2\u03fd"+
+		"\7b\2\2\u03fa\u03ff\7\64\2\2\u03fb\u03fc\t\20\2\2\u03fc\u03fd\7^\2\2\u03fd"+
 		"\u03ff\5t;\2\u03fe\u03fa\3\2\2\2\u03fe\u03fb\3\2\2\2\u03ff\u0400\3\2\2"+
 		"\2\u0400\u0401\7c\2\2\u0401s\3\2\2\2\u0402\u0403\7n\2\2\u0403u\3\2\2\2"+
 		"\u008fy}\u0080\u0086\u008a\u0098\u009d\u00a0\u00a5\u00ad\u00b4\u00b8\u00c9"+

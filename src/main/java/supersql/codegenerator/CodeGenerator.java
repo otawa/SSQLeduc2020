@@ -679,9 +679,9 @@ public class CodeGenerator {
 
 		if(operand.get(operand.size() - 1).toString().equals("%")){
 			dim = 3;
-		}else if(operand.get(operand.size() - 1).toString().equals(",")){
-			dim = 2;
 		}else if(operand.get(operand.size() - 1).toString().equals("!")){
+			dim = 2;
+		}else if(operand.get(operand.size() - 1).toString().equals(",")){
 			dim = 1;
 		}
 
