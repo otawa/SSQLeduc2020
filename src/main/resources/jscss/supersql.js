@@ -160,9 +160,6 @@ $(document).on('pageshow', '#p-gallery', function(e){
 	}
 });
 
-$(function(){
-    $('[data-toggle="tooltip"]').tooltip()
-})
 
 /*
 $(document).ready(function() {
